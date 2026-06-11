@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #faf7f2;
+  --warm-white: #f5f0e8;
+  --sand: #e8dcc8;
+  --caramel: #c49a6c;
+  --espresso: #2d1f0e;
+  --mocha: #5c3d1e;
+  --muted: #8a7560;
+  --accent: #d47c3a;
+  --green: #4a7c59;
+  --red: #c0392b;
+  --blue: #2c5f8a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+  background: var(--cream);
+  color: var(--espresso);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display), serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--warm-white); }
+::-webkit-scrollbar-thumb { background: var(--sand); border-radius: 3px; }
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.fade-up { animation: fadeUp 0.4s ease forwards; }
+.slide-in { animation: slideIn 0.3s ease forwards; }
+
+/* Status badges */
+.badge-pending {
+  background: #fef3cd;
+  color: #856404;
+  border: 1px solid #fde08d;
+}
+.badge-in_progress {
+  background: #cfe2ff;
+  color: #084298;
+  border: 1px solid #9ec5fe;
+}
+.badge-completed {
+  background: #d1e7dd;
+  color: #0a3622;
+  border: 1px solid #a3cfbb;
+}
