@@ -13,7 +13,7 @@ from datetime import datetime
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, origins=[os.getenv("FRONTEND_URL", "http://localhost:3000")])
+CORS(app, origins="*")
 
 # Supabase client
 supabase: Client = create_client(
